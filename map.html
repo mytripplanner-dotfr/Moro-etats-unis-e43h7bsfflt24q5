@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte du voyage - Moro etats unis</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    #map { height: 100vh; width: 100%; }
+    .info-window { max-width: 250px; font-family: Arial, sans-serif; }
+    .info-window img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px; }
+    .info-window h3 { margin: 0 0 5px 0; font-size: 16px; color: #333; }
+    .info-window p { margin: 5px 0; font-size: 14px; color: #666; }
+    .info-window a { color: #1a73e8; text-decoration: none; }
+    .info-window a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  
+  <script>
+    function initMap() {
+      const center = { lat: 45.34766336666667, lng: -121.70620243333332 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: center
+      });
+      
+      const markers = [{"lat":45.515232,"lng":-122.6783853,"name":"Portland, Oregon","jour":1,"titre":"Arrivée paisible à Portland","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.515232,-122.6783853&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.515232,-122.6783853","aiImageUrl":"jour1.jpg"},{"lat":45.8917738,"lng":-123.9615274,"name":"Cannon Beach, Oregon","jour":4,"titre":"Évasion vers la côte Pacifique","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.8917738,-123.9615274&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.8917738,-123.9615274","aiImageUrl":"jour4.jpg"},{"lat":45.7087498,"lng":-121.7524723,"name":"Columbia River Gorge, Oregon","jour":5,"titre":"Les merveilles des Gorges du Columbia","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.7087498,-121.7524723&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.7087498,-121.7524723","aiImageUrl":"jour5.jpg"},{"lat":45.5378947,"lng":-121.568408,"name":"Hood River / Mont Hood, Oregon","jour":6,"titre":"Majesté du Mont Hood et saveurs locales","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.5378947,-121.568408&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.5378947,-121.568408","aiImageUrl":"jour6.jpg"},{"lat":45.6017716,"lng":-121.1848433,"name":"The Dalles / Moro, Oregon","jour":7,"titre":"Vers Moro : Histoire et paysages agricoles","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.6017716,-121.1848433&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.6017716,-121.1848433","aiImageUrl":"jour7.jpg"},{"lat":45.4840141,"lng":-120.731168,"name":"Moro / Comté de Sherman, Oregon","jour":8,"titre":"Le cœur du comté de Sherman","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.4840141,-120.731168&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.4840141,-120.731168","aiImageUrl":"jour8.jpg"},{"lat":44.6615223,"lng":-120.2730726,"name":"John Day Fossil Beds (Painted Hills), Oregon","jour":9,"titre":"Les merveilles géologiques des Painted Hills","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=44.6615223,-120.2730726&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=44.6615223,-120.2730726","aiImageUrl":"jour9.jpg"},{"lat":44.0581728,"lng":-121.3153096,"name":"Bend, Oregon","jour":10,"titre":"Cap sur le désert central : Bend","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=44.0581728,-121.3153096&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=44.0581728,-121.3153096","aiImageUrl":"jour10.jpg"},{"lat":45.6698392,"lng":-121.8906354,"name":"Lacs des Cascades, Oregon","jour":12,"titre":"Lacs et forêts des Cascades","streetViewUrl":"https://maps.googleapis.com/maps/api/streetview?size=600x400&location=45.6698392,-121.8906354&key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI","streetViewLinkUrl":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=45.6698392,-121.8906354","aiImageUrl":"jour12.jpg"}];
+      
+      markers.forEach((markerData) => {
+        const marker = new google.maps.Marker({
+          position: { lat: markerData.lat, lng: markerData.lng },
+          map: map,
+          title: markerData.name,
+          label: String(markerData.jour)
+        });
+        
+        const contentString = `
+          <div class="info-window">
+            <img src="${markerData.streetViewUrl}" alt="Street View de ${markerData.name}" />
+            <h3>Jour ${markerData.jour}</h3>
+            <p><strong>${markerData.name}</strong></p>
+            <p><a href="${markerData.streetViewLinkUrl}" target="_blank" rel="noopener noreferrer"><strong>${markerData.titre}</strong></a></p>
+          </div>
+        `;
+        
+        const infoWindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        
+        marker.addListener('click', () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+  
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5WUNvRC9eOjHRLt92fs4hsp0Auje3aAI&callback=initMap">
+  </script>
+</body>
+</html>
