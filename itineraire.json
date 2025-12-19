@@ -1,0 +1,439 @@
+{
+  "pays": "États-Unis",
+  "drapeau": "🇺🇸",
+  "symbole": "🌲",
+  "titre": "L'Odyssée Naturelle de l'Oregon : Des Gorges aux Déserts",
+  "budget_total": "$2900 - $3500 USD par personne",
+  "duree": "14 jours",
+  "date_debut": "2026-01-28",
+  "date_fin": "2026-02-11",
+  "temps_vol": "Environ 7h avec escale depuis Gillett, Wisconsin",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée paisible à Portland",
+      "legende": "Après un long voyage depuis Gillett, atterrissez à Portland, la ville des roses. Prenez le temps de vous installer et de faire une première immersion douce dans l'ambiance décontractée de cette métropole de l'Oregon. Une balade légère vous permettra de vous dégourdir les jambes et de repérer les environs.",
+      "lieu": "Portland, Oregon",
+      "activites": [
+        "🛬 <strong>Arrivée et installation</strong>: Atterrissez à l'aéroport international de Portland (PDX), récupérez votre voiture de location et rejoignez votre hôtel pour vous installer confortablement.",
+        "🚶‍♀️ <strong>Première balade dans le quartier de l'hôtel</strong>: Profitez de la fin d'après-midi pour une promenade décontractée autour de votre hébergement, découvrant les cafés et l'architecture locale."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil Arrivée",
+          "texte": "Le trajet depuis l'aéroport de Portland (PDX) vers le centre-ville prend environ 30-45 minutes en voiture, selon le trafic."
+        },
+        {
+          "symbole": "🚗",
+          "titre": "Location de voiture",
+          "texte": "Une voiture est indispensable pour explorer l'Oregon. Réservez-la à l'avance pour de meilleurs tarifs et une plus grande disponibilité."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "📚",
+      "titre": "Immersion urbaine à Portland",
+      "legende": "Plongez au cœur de Portland, une ville réputée pour son esprit indépendant et sa culture unique. Des librairies emblématiques aux parcs verdoyants, en passant par les quartiers branchés, cette journée vous offre un aperçu de l'âme créative de la ville. Préparez-vous à marcher et à vous laisser surprendre par ses trésors cachés.",
+      "lieu": "Portland, Oregon",
+      "activites": [
+        "📚 <strong>Exploration de Powell's City of Books</strong>: Perdez-vous dans les allées de la plus grande librairie indépendante du monde, un véritable labyrinthe de savoir et de découvertes littéraires.",
+        "🛍️ <strong>Découverte du Pearl District</strong>: Flânez dans ce quartier autrefois industriel, aujourd'hui transformé en un pôle d'art, de boutiques chics et de galeries, parfait pour une ambiance urbaine raffinée.",
+        "🌳 <strong>Détente à Tom McCall Waterfront Park</strong>: Profitez d'une promenade le long de la rivière Willamette, offrant des vues apaisantes sur les ponts de Portland et l'horizon de la ville."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "☕",
+          "titre": "Culture Café",
+          "texte": "Portland est célèbre pour son café. Ne manquez pas de goûter un \"pour-over\" dans l'un des nombreux coffee shops indépendants."
+        },
+        {
+          "symbole": "🚶‍♀️",
+          "titre": "Transports",
+          "texte": "Le centre-ville de Portland est très agréable à explorer à pied. Les transports en commun (MAX Light Rail, bus) sont également efficaces."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🌸",
+      "titre": "Nature et panoramas de Portland",
+      "legende": "Échappez à l'agitation urbaine pour vous immerger dans la nature luxuriante qui entoure Portland. Des jardins paisibles aux points de vue imprenables, cette journée est dédiée à la beauté naturelle et aux panoramas spectaculaires. C'est l'occasion de respirer l'air frais et d'admirer la ville sous un autre angle.",
+      "lieu": "Portland, Oregon",
+      "activites": [
+        "🌸 <strong>Visite du Jardin Japonais de Portland</strong>: Explorez ce havre de paix, l'un des jardins japonais les plus authentiques en dehors du Japon, offrant une sérénité et une beauté exceptionnelles même en hiver.",
+        "🌹 <strong>Promenade au International Rose Test Garden</strong>: Bien que les roses soient en dormance en février, le jardin offre toujours de belles vues sur la ville et le Mont Hood par temps clair, et une structure paysagère intéressante.",
+        "📸 <strong>Vue panoramique depuis Pittock Mansion</strong>: Admirez une vue imprenable sur le centre-ville de Portland, la chaîne des Cascades et les volcans environnants depuis ce manoir historique."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "☔",
+          "titre": "Météo Hivernale",
+          "texte": "En février, Portland peut être pluvieux. Prévoyez des vêtements imperméables et des chaussures confortables pour profiter pleinement des activités extérieures."
+        },
+        {
+          "symbole": "🅿️",
+          "titre": "Parking",
+          "texte": "Le parking peut être limité et payant dans les zones touristiques comme Washington Park. Pensez au covoiturage ou aux transports en commun si possible."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🌊",
+      "titre": "Évasion vers la côte Pacifique",
+      "legende": "Laissez-vous emporter par la majesté de la côte de l'Oregon, un littoral sauvage et spectaculaire. La journée est consacrée à la découverte de Cannon Beach, célèbre pour son emblématique Haystack Rock. Préparez-vous à des paysages grandioses, à l'air marin vivifiant et à une atmosphère unique, même en plein hiver.",
+      "lieu": "Cannon Beach, Oregon",
+      "activites": [
+        "🚗 <strong>Route panoramique vers Cannon Beach</strong>: Empruntez la pittoresque Highway 26 pour rejoindre la côte, en admirant les forêts denses de l'Oregon.",
+        "🗿 <strong>Exploration de Haystack Rock</strong>: Marchez sur la plage de Cannon Beach pour admirer de près cette formation rocheuse emblématique et observer la faune marine à marée basse.",
+        "🖼️ <strong>Visite des galeries d'art locales</strong>: Réchauffez-vous en explorant les charmantes galeries d'art et boutiques de Cannon Beach, proposant des œuvres inspirées par la beauté de la côte."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🌬️",
+          "titre": "Vêtements",
+          "texte": "La côte de l'Oregon est souvent venteuse et fraîche en février. Habillez-vous en couches et prévoyez un coupe-vent chaud."
+        },
+        {
+          "symbole": " tide",
+          "titre": "Marées",
+          "texte": "Consultez les horaires des marées pour explorer les bassins rocheux autour de Haystack Rock en toute sécurité."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏞️",
+      "titre": "Les merveilles des Gorges du Columbia",
+      "legende": "Aujourd'hui, l'aventure vous mène vers l'est, au cœur des spectaculaires Gorges du fleuve Columbia. Cette région est un trésor de cascades majestueuses et de panoramas à couper le souffle. Préparez-vous à des randonnées courtes mais gratifiantes et à des vues qui resteront gravées dans votre mémoire. C'est une immersion totale dans la puissance de la nature.",
+      "lieu": "Columbia River Gorge, Oregon",
+      "activites": [
+        "💧 <strong>Découverte de Multnomah Falls</strong>: Admirez la deuxième plus haute cascade des États-Unis, une merveille naturelle accessible via un pont historique offrant des vues imprenables.",
+        "🌉 <strong>Visite du Pont des Dieux (Bridge of the Gods)</strong>: Traversez ce pont emblématique qui enjambe le fleuve Columbia, offrant des vues spectaculaires sur les gorges et les montagnes environnantes.",
+        "🚶‍♂️ <strong>Randonnée à Wahkeena Falls</strong>: Profitez d'une randonnée plus courte vers Wahkeena Falls, souvent moins fréquentée que Multnomah, avec un sentier charmant et une atmosphère paisible."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Conditions Hivernales",
+          "texte": "Certains sentiers peuvent être glissants ou fermés en hiver en raison de la glace ou de la neige. Vérifiez les conditions avant de partir."
+        },
+        {
+          "symbole": "🅿️",
+          "titre": "Parking",
+          "texte": "Le parking à Multnomah Falls peut être très fréquenté. Arrivez tôt le matin pour éviter la foule."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🏔️",
+      "titre": "Majesté du Mont Hood et saveurs locales",
+      "legende": "Poursuivez votre exploration des Gorges du Columbia en vous dirigeant vers les contreforts du majestueux Mont Hood, le plus haut sommet de l'Oregon. Cette journée combine des paysages alpins, des vues imprenables et la découverte de la célèbre Hood River Fruit Loop, même si les vergers sont en dormance, l'ambiance reste charmante. C'est une immersion dans la beauté montagnarde et la culture agricole locale.",
+      "lieu": "Hood River / Mont Hood, Oregon",
+      "activites": [
+        "🍎 <strong>Exploration de la Hood River Fruit Loop</strong>: Parcourez cette route pittoresque, même en hiver, pour admirer les vergers endormis et visiter des cidreries ou des fermes proposant des produits locaux.",
+        "🌲 <strong>Visite de Timberline Lodge (Mont Hood)</strong>: Montez vers ce lodge historique, célèbre pour son architecture et ses vues spectaculaires sur le Mont Hood, même si les activités de ski ne vous intéressent pas.",
+        "🍺 <strong>Dégustation à Hood River</strong>: Terminez la journée dans la charmante ville de Hood River, réputée pour ses brasseries artisanales et ses cidreries, offrant une ambiance chaleureuse."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "❄️",
+          "titre": "Accès Mont Hood",
+          "texte": "Les routes vers Timberline Lodge peuvent nécessiter des chaînes ou des pneus neige en février. Vérifiez les conditions routières avant de partir."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Gastronomie",
+          "texte": "Hood River offre une excellente scène culinaire, avec de nombreux restaurants proposant des produits frais de la région."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🌾",
+      "titre": "Vers Moro : Histoire et paysages agricoles",
+      "legende": "Aujourd'hui, vous quittez les paysages montagneux pour vous diriger vers l'est, en direction de Moro, au cœur des vastes plaines agricoles de l'Oregon. Cette journée est une transition vers des paysages plus ouverts, marqués par l'histoire des pionniers et la culture du blé. C'est l'occasion de découvrir des villes historiques et de sentir le pouls de l'Amérique rurale.",
+      "lieu": "The Dalles / Moro, Oregon",
+      "activites": [
+        "🏛️ <strong>Découverte historique à The Dalles</strong>: Explorez cette ville historique, ancien point de passage pour les pionniers sur la piste de l'Oregon, avec son musée et ses bâtiments anciens.",
+        "🚗 <strong>Route panoramique vers Moro</strong>: Profitez du trajet à travers les vastes champs de blé et les paysages vallonnés du comté de Sherman, offrant une perspective différente de l'Oregon.",
+        "🏡 <strong>Installation à Moro et exploration locale</strong>: Arrivée à Moro, installation à votre hébergement et petite balade pour vous imprégner de l'atmosphère de cette petite ville rurale."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Préparation",
+          "texte": "Moro est une très petite ville. Assurez-vous d'avoir fait le plein d'essence et d'avoir quelques provisions avant d'arriver."
+        },
+        {
+          "symbole": "📡",
+          "titre": "Connectivité",
+          "texte": "La couverture réseau peut être limitée dans certaines zones rurales. Téléchargez des cartes hors ligne si nécessaire."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "💨",
+      "titre": "Le cœur du comté de Sherman",
+      "legende": "Cette journée est dédiée à l'exploration des environs de Moro et du comté de Sherman, une région caractérisée par ses vastes paysages agricoles et ses parcs éoliens. C'est une immersion dans la vie rurale de l'Oregon, offrant des vues imprenables sur les champs à perte de vue et une sensation d'espace infini. Découvrez l'histoire locale et la puissance des énergies renouvelables.",
+      "lieu": "Moro / Comté de Sherman, Oregon",
+      "activites": [
+        "💨 <strong>Observation des éoliennes</strong>: Conduisez à travers les champs pour admirer les impressionnantes éoliennes qui parsèment le paysage, symboles de l'énergie renouvelable de la région.",
+        "🏛️ <strong>Visite du Sherman County Historical Museum</strong>: Plongez dans l'histoire des pionniers et de l'agriculture de la région, découvrant des artefacts et des récits fascinants.",
+        "🌅 <strong>Coucher de soleil sur les plaines</strong>: Trouvez un point de vue élevé pour admirer un coucher de soleil spectaculaire sur les vastes plaines du comté de Sherman, un moment de pure sérénité."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Les paysages ouverts et les éoliennes offrent des opportunités photographiques uniques, surtout au lever ou au coucher du soleil."
+        },
+        {
+          "symbole": "🌬️",
+          "titre": "Vent",
+          "texte": "Le comté de Sherman est souvent venteux, d'où la présence des éoliennes. Prévoyez des vêtements adaptés."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🎨",
+      "titre": "Les merveilles géologiques des Painted Hills",
+      "legende": "Préparez-vous pour une journée d'exploration d'un des trésors naturels les plus uniques de l'Oregon : les Painted Hills, une unité du John Day Fossil Beds National Monument. Ces collines aux couleurs vives, sculptées par des millions d'années d'histoire géologique, offrent un spectacle visuel époustouflant. C'est une excursion mémorable dans un paysage qui semble venir d'une autre planète.",
+      "lieu": "John Day Fossil Beds (Painted Hills), Oregon",
+      "activites": [
+        "🚗 <strong>Route panoramique vers les Painted Hills</strong>: Profitez du long trajet à travers des paysages changeants, des plaines agricoles aux formations rocheuses désertiques.",
+        "🎨 <strong>Randonnée aux Painted Hills Overlook Trail</strong>: Admirez les couches de couleurs vibrantes des collines, allant du rouge au jaune en passant par le noir, un spectacle géologique fascinant.",
+        "🚶‍♀️ <strong>Exploration du Leaf Hill Trail et Carroll Rim Trail</strong>: Parcourez ces sentiers courts pour des perspectives différentes sur les collines et pour observer les fossiles végétaux exposés."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Distance",
+          "texte": "Les Painted Hills sont à environ 2h30 de route de Moro. Prévoyez une journée complète pour cette excursion."
+        },
+        {
+          "symbole": "☀️",
+          "titre": "Hydratation",
+          "texte": "Même en hiver, le climat désertique peut être sec. Emportez suffisamment d'eau et des collations."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🏜️",
+      "titre": "Cap sur le désert central : Bend",
+      "legende": "Aujourd'hui, vous quittez les plaines de l'est pour vous diriger vers le sud, vers la région du désert central de l'Oregon et la ville dynamique de Bend. Ce changement de paysage vous mènera à travers des forêts de pins et des formations volcaniques. Bend est une ville réputée pour ses activités de plein air et son ambiance décontractée. C'est une transition vers une nouvelle facette de la diversité de l'Oregon.",
+      "lieu": "Bend, Oregon",
+      "activites": [
+        "🚗 <strong>Trajet panoramique vers Bend</strong>: Profitez de la route à travers les paysages variés de l'Oregon, des plaines aux forêts de pins ponderosa.",
+        "🚶‍♀️ <strong>Balade le long de la Deschutes River</strong>: Une fois à Bend, promenez-vous le long de la pittoresque rivière Deschutes qui traverse la ville, offrant des vues apaisantes et des sentiers agréables.",
+        "🍻 <strong>Découverte du centre-ville de Bend</strong>: Explorez les boutiques, galeries et brasseries artisanales du charmant centre-ville de Bend, réputé pour son ambiance conviviale."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🏔️",
+          "titre": "Vues Montagneuses",
+          "texte": "Par temps clair, Bend offre des vues spectaculaires sur les sommets enneigés des Cascades, comme les Three Sisters."
+        },
+        {
+          "symbole": "⛽",
+          "titre": "Essence",
+          "texte": "En Oregon, il est interdit de faire le plein soi-même. Un pompiste s'en chargera pour vous."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🌋",
+      "titre": "Aventures volcaniques et culture du désert",
+      "legende": "Cette journée est consacrée à l'exploration des paysages volcaniques uniques qui entourent Bend et à la découverte de la faune et de la culture du désert. Des cratères aux musées interactifs, vous plongerez dans l'histoire géologique et naturelle de la région. C'est une journée riche en découvertes, alliant nature et apprentissage.",
+      "lieu": "Bend, Oregon",
+      "activites": [
+        "🌋 <strong>Randonnée à Pilot Butte State Scenic Viewpoint</strong>: Montez au sommet de ce cône volcanique éteint situé en plein cœur de Bend pour des vues panoramiques sur la ville et les montagnes des Cascades.",
+        "🦅 <strong>Visite du High Desert Museum</strong>: Explorez ce musée fascinant qui met en valeur l'histoire naturelle, la culture et la faune du désert de l'Oregon, avec des expositions intérieures et extérieures.",
+        "🌲 <strong>Promenade dans le Newberry National Volcanic Monument</strong>: Découvrez des paysages lunaires, des coulées de lave et des lacs gelés dans ce monument national, offrant une immersion dans l'activité volcanique passée de la région."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "❄️",
+          "titre": "Activités Hivernales",
+          "texte": "Bend est une destination populaire pour le ski et le snowboard en hiver. Si vous êtes intéressé, le Mont Bachelor est à proximité."
+        },
+        {
+          "symbole": "🚶‍♂️",
+          "titre": "Chaussures",
+          "texte": "Prévoyez des chaussures de marche robustes et imperméables pour les sentiers volcaniques et les promenades en nature."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🌲",
+      "titre": "Lacs et forêts des Cascades",
+      "legende": "Aujourd'hui, l'itinéraire vous mène plus profondément dans la chaîne des Cascades, à la découverte de ses lacs et de ses forêts majestueuses. Bien que certains lacs puissent être gelés ou enneigés en février, la beauté des paysages hivernaux est indéniable. C'est une journée pour apprécier la tranquillité de la nature et les panoramas grandioses des montagnes de l'Oregon.",
+      "lieu": "Lacs des Cascades, Oregon",
+      "activites": [
+        "❄️ <strong>Exploration du Lac Mirror (Mirror Lake)</strong>: Profitez d'une courte randonnée vers ce lac pittoresque, offrant des vues magnifiques sur le Mont Hood par temps clair, même en hiver.",
+        "🌲 <strong>Promenade dans la Forêt Nationale de Willamette</strong>: Conduisez à travers les routes scéniques de cette forêt, admirant les immenses conifères et la sérénité des paysages hivernaux.",
+        "📸 <strong>Point de vue sur le Lac Trillium (Trillium Lake)</strong>: Si l'accès est possible et sécurisé, ce lac offre des vues emblématiques du Mont Hood se reflétant dans ses eaux, même gelées."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Accès Routier",
+          "texte": "De nombreuses routes de montagne peuvent être fermées ou nécessiter des chaînes en février. Vérifiez toujours les conditions routières avant de partir."
+        },
+        {
+          "symbole": "🥪",
+          "titre": "Pique-nique",
+          "texte": "Les options de restauration sont limitées dans ces zones reculées. Préparez un pique-nique et des boissons chaudes."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🛣️",
+      "titre": "Retour vers Portland et dernière soirée",
+      "legende": "Après avoir exploré les diverses facettes de l'Oregon, des plaines de Moro aux montagnes des Cascades, il est temps de reprendre la route vers Portland. Cette journée est l'occasion de profiter une dernière fois des paysages changeants de l'État et de se remémorer les moments forts de votre voyage. Une dernière soirée à Portland vous permettra de savourer l'ambiance unique de la ville.",
+      "lieu": "Portland, Oregon",
+      "activites": [
+        "🚗 <strong>Retour panoramique vers Portland</strong>: Prenez une route différente si possible pour varier les paysages lors de votre retour vers la capitale de l'Oregon.",
+        "🍜 <strong>Dîner dans un food cart pod</strong>: Pour votre dernière soirée, découvrez l'une des célèbres \"food cart pods\" de Portland, offrant une incroyable diversité de cuisines du monde entier à des prix abordables.",
+        "🛍️ <strong>Achats de dernière minute</strong>: Profitez de l'absence de taxe de vente en Oregon pour faire quelques emplettes de souvenirs ou de produits locaux."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Shopping",
+          "texte": "L'Oregon est l'un des rares États américains sans taxe de vente, ce qui est avantageux pour le shopping."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Food Carts",
+          "texte": "Les \"food carts\" sont une institution à Portland. N'hésitez pas à essayer plusieurs stands pour une expérience culinaire variée."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🛫",
+      "titre": "Départ de Portland",
+      "legende": "C'est le dernier jour de votre aventure en Oregon. Après avoir exploré des paysages variés, des villes dynamiques aux déserts colorés, il est temps de prendre votre vol de retour. Profitez d'un dernier petit-déjeuner typiquement américain avant de vous diriger vers l'aéroport, la tête pleine de souvenirs inoubliables de l'État du Castor.",
+      "lieu": "Portland, Oregon",
+      "activites": [
+        "🍳 <strong>Dernier petit-déjeuner à Portland</strong>: Savourez un dernier repas dans un café local, imprégné de l'ambiance unique de la ville.",
+        "🚗 <strong>Restitution de la voiture de location</strong>: Rendez votre véhicule à l'aéroport de Portland (PDX) en prévoyant suffisamment de temps.",
+        "🛫 <strong>Vol retour vers Gillett, Wisconsin</strong>: Embarquez pour votre vol, emportant avec vous les souvenirs d'un voyage mémorable à travers les paysages diversifiés de l'Oregon."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Arrivez à l'aéroport au moins 2 heures avant votre vol intérieur pour les formalités de sécurité."
+        },
+        {
+          "symbole": "✈️",
+          "titre": "Bagages",
+          "texte": "Vérifiez les restrictions de bagages de votre compagnie aérienne avant de vous rendre à l'aéroport."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "$550 USD/pers (vol aller-retour Gillett, WI - Portland, OR avec escale)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "$590 USD/pers (location voiture 14j + essence, base 2 pers)",
+      "symbole": "🚗"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "$525 USD/pers (environ $37/jour pour 14 jours, repas variés)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "$975 USD/pers (13 nuits en hôtel 3 étoiles, base 2 pers)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "$245 USD/pers (entrées parcs, musées, activités diverses)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de mai à octobre pour un temps plus doux et un accès facilité à toutes les activités de plein air. Cependant, février offre une beauté hivernale unique et moins de foule.",
+      "symbole": "🍁"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "L'Oregon compte environ 4,3 millions d'habitants. La population est concentrée dans la Willamette Valley, notamment à Portland. L'État est connu pour son esprit progressiste et son amour de la nature.",
+      "symbole": "👥"
+    },
+    {
+      "titre": "Les États-Unis sont un pays vaste et diversifié. L'Oregon se distingue par ses paysages variés, allant des plages du Pacifique aux volcans enneigés, en passant par les déserts et les forêts denses.",
+      "symbole": "🇺🇸"
+    },
+    {
+      "titre": "En Oregon, il est illégal de faire le plein d'essence soi-même (sauf dans certaines zones rurales la nuit). Un pompiste s'occupera de votre véhicule. C'est une particularité unique de l'État !",
+      "symbole": "⛽"
+    },
+    {
+      "titre": "L'Oregon n'applique pas de taxe de vente, ce qui rend le shopping particulièrement intéressant pour les visiteurs.",
+      "symbole": "🛍️"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles sur le tourisme en Oregon",
+      "titre": "Travel Oregon",
+      "url": "https://traveloregon.com/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Informations sur les parcs nationaux et monuments",
+      "titre": "National Park Service (Oregon)",
+      "url": "https://www.nps.gov/state/or/index.htm",
+      "symbole": "🏞️"
+    },
+    {
+      "legende": "Prévisions météo détaillées pour l'Oregon",
+      "titre": "National Weather Service (Oregon)",
+      "url": "https://www.weather.gov/pqr/",
+      "symbole": "🌤️"
+    },
+    {
+      "legende": "Conditions routières en temps réel en Oregon",
+      "titre": "Oregon Department of Transportation (ODOT)",
+      "url": "https://www.tripcheck.com/",
+      "symbole": "🛣️"
+    }
+  ]
+}
