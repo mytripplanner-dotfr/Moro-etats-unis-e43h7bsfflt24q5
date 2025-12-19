@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Odyssée Naturelle de l'Oregon : Des Gorges aux Déserts </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée paisible à Portland</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Immersion urbaine à Portland</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Nature et panoramas de Portland</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Évasion vers la côte Pacifique</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Les merveilles des Gorges du Columbia</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Majesté du Mont Hood et saveurs locales</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Vers Moro : Histoire et paysages agricoles</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Le cœur du comté de Sherman</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Les merveilles géologiques des Painted Hills</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Cap sur le désert central : Bend</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Aventures volcaniques et culture du désert</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Lacs et forêts des Cascades</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Retour vers Portland et dernière soirée</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Départ de Portland</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">MORO- ETATS UNIS</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Odyssée Naturelle de l'Oregon : Des Gorges aux Déserts</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 28 Janvier au 11 Février 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 $2900 - $3500 USD par personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 7h avec escale depuis Gillett, Wisconsin</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée paisible à Portland</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage depuis Gillett, atterrissez à Portland, la ville des roses. Prenez le temps de vous installer et de faire une première immersion douce dans l'ambiance décontractée de cette métropole de l'Oregon. Une balade légère vous permettra de vous dégourdir les jambes et de repérer les environs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée et installation</strong>: Atterrissez à l'aéroport international de Portland (PDX), récupérez votre voiture de location et rejoignez votre hôtel pour vous installer confortablement.</li><li>🚶‍♀️ <strong>Première balade dans le quartier de l'hôtel</strong>: Profitez de la fin d'après-midi pour une promenade décontractée autour de votre hébergement, découvrant les cafés et l'architecture locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil Arrivée</p>
+                                <p class="text-gray-700">Le trajet depuis l'aéroport de Portland (PDX) vers le centre-ville prend environ 30-45 minutes en voiture, selon le trafic.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Location de voiture</p>
+                                <p class="text-gray-700">Une voiture est indispensable pour explorer l'Oregon. Réservez-la à l'avance pour de meilleurs tarifs et une plus grande disponibilité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion urbaine à Portland</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de Portland, une ville réputée pour son esprit indépendant et sa culture unique. Des librairies emblématiques aux parcs verdoyants, en passant par les quartiers branchés, cette journée vous offre un aperçu de l'âme créative de la ville. Préparez-vous à marcher et à vous laisser surprendre par ses trésors cachés.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>📚 <strong>Exploration de Powell's City of Books</strong>: Perdez-vous dans les allées de la plus grande librairie indépendante du monde, un véritable labyrinthe de savoir et de découvertes littéraires.</li><li>🛍️ <strong>Découverte du Pearl District</strong>: Flânez dans ce quartier autrefois industriel, aujourd'hui transformé en un pôle d'art, de boutiques chics et de galeries, parfait pour une ambiance urbaine raffinée.</li><li>🌳 <strong>Détente à Tom McCall Waterfront Park</strong>: Profitez d'une promenade le long de la rivière Willamette, offrant des vues apaisantes sur les ponts de Portland et l'horizon de la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☕ Culture Café</p>
+                                <p class="text-gray-700">Portland est célèbre pour son café. Ne manquez pas de goûter un "pour-over" dans l'un des nombreux coffee shops indépendants.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Transports</p>
+                                <p class="text-gray-700">Le centre-ville de Portland est très agréable à explorer à pied. Les transports en commun (MAX Light Rail, bus) sont également efficaces.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nature et panoramas de Portland</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à l'agitation urbaine pour vous immerger dans la nature luxuriante qui entoure Portland. Des jardins paisibles aux points de vue imprenables, cette journée est dédiée à la beauté naturelle et aux panoramas spectaculaires. C'est l'occasion de respirer l'air frais et d'admirer la ville sous un autre angle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌸 <strong>Visite du Jardin Japonais de Portland</strong>: Explorez ce havre de paix, l'un des jardins japonais les plus authentiques en dehors du Japon, offrant une sérénité et une beauté exceptionnelles même en hiver.</li><li>🌹 <strong>Promenade au International Rose Test Garden</strong>: Bien que les roses soient en dormance en février, le jardin offre toujours de belles vues sur la ville et le Mont Hood par temps clair, et une structure paysagère intéressante.</li><li>📸 <strong>Vue panoramique depuis Pittock Mansion</strong>: Admirez une vue imprenable sur le centre-ville de Portland, la chaîne des Cascades et les volcans environnants depuis ce manoir historique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☔ Météo Hivernale</p>
+                                <p class="text-gray-700">En février, Portland peut être pluvieux. Prévoyez des vêtements imperméables et des chaussures confortables pour profiter pleinement des activités extérieures.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🅿️ Parking</p>
+                                <p class="text-gray-700">Le parking peut être limité et payant dans les zones touristiques comme Washington Park. Pensez au covoiturage ou aux transports en commun si possible.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion vers la côte Pacifique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Laissez-vous emporter par la majesté de la côte de l'Oregon, un littoral sauvage et spectaculaire. La journée est consacrée à la découverte de Cannon Beach, célèbre pour son emblématique Haystack Rock. Préparez-vous à des paysages grandioses, à l'air marin vivifiant et à une atmosphère unique, même en plein hiver.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route panoramique vers Cannon Beach</strong>: Empruntez la pittoresque Highway 26 pour rejoindre la côte, en admirant les forêts denses de l'Oregon.</li><li>🗿 <strong>Exploration de Haystack Rock</strong>: Marchez sur la plage de Cannon Beach pour admirer de près cette formation rocheuse emblématique et observer la faune marine à marée basse.</li><li>🖼️ <strong>Visite des galeries d'art locales</strong>: Réchauffez-vous en explorant les charmantes galeries d'art et boutiques de Cannon Beach, proposant des œuvres inspirées par la beauté de la côte.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌬️ Vêtements</p>
+                                <p class="text-gray-700">La côte de l'Oregon est souvent venteuse et fraîche en février. Habillez-vous en couches et prévoyez un coupe-vent chaud.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1"> tide Marées</p>
+                                <p class="text-gray-700">Consultez les horaires des marées pour explorer les bassins rocheux autour de Haystack Rock en toute sécurité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Les merveilles des Gorges du Columbia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'aventure vous mène vers l'est, au cœur des spectaculaires Gorges du fleuve Columbia. Cette région est un trésor de cascades majestueuses et de panoramas à couper le souffle. Préparez-vous à des randonnées courtes mais gratifiantes et à des vues qui resteront gravées dans votre mémoire. C'est une immersion totale dans la puissance de la nature.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💧 <strong>Découverte de Multnomah Falls</strong>: Admirez la deuxième plus haute cascade des États-Unis, une merveille naturelle accessible via un pont historique offrant des vues imprenables.</li><li>🌉 <strong>Visite du Pont des Dieux (Bridge of the Gods)</strong>: Traversez ce pont emblématique qui enjambe le fleuve Columbia, offrant des vues spectaculaires sur les gorges et les montagnes environnantes.</li><li>🚶‍♂️ <strong>Randonnée à Wahkeena Falls</strong>: Profitez d'une randonnée plus courte vers Wahkeena Falls, souvent moins fréquentée que Multnomah, avec un sentier charmant et une atmosphère paisible.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Conditions Hivernales</p>
+                                <p class="text-gray-700">Certains sentiers peuvent être glissants ou fermés en hiver en raison de la glace ou de la neige. Vérifiez les conditions avant de partir.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🅿️ Parking</p>
+                                <p class="text-gray-700">Le parking à Multnomah Falls peut être très fréquenté. Arrivez tôt le matin pour éviter la foule.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Majesté du Mont Hood et saveurs locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Poursuivez votre exploration des Gorges du Columbia en vous dirigeant vers les contreforts du majestueux Mont Hood, le plus haut sommet de l'Oregon. Cette journée combine des paysages alpins, des vues imprenables et la découverte de la célèbre Hood River Fruit Loop, même si les vergers sont en dormance, l'ambiance reste charmante. C'est une immersion dans la beauté montagnarde et la culture agricole locale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍎 <strong>Exploration de la Hood River Fruit Loop</strong>: Parcourez cette route pittoresque, même en hiver, pour admirer les vergers endormis et visiter des cidreries ou des fermes proposant des produits locaux.</li><li>🌲 <strong>Visite de Timberline Lodge (Mont Hood)</strong>: Montez vers ce lodge historique, célèbre pour son architecture et ses vues spectaculaires sur le Mont Hood, même si les activités de ski ne vous intéressent pas.</li><li>🍺 <strong>Dégustation à Hood River</strong>: Terminez la journée dans la charmante ville de Hood River, réputée pour ses brasseries artisanales et ses cidreries, offrant une ambiance chaleureuse.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">❄️ Accès Mont Hood</p>
+                                <p class="text-gray-700">Les routes vers Timberline Lodge peuvent nécessiter des chaînes ou des pneus neige en février. Vérifiez les conditions routières avant de partir.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Gastronomie</p>
+                                <p class="text-gray-700">Hood River offre une excellente scène culinaire, avec de nombreux restaurants proposant des produits frais de la région.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers Moro : Histoire et paysages agricoles</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, vous quittez les paysages montagneux pour vous diriger vers l'est, en direction de Moro, au cœur des vastes plaines agricoles de l'Oregon. Cette journée est une transition vers des paysages plus ouverts, marqués par l'histoire des pionniers et la culture du blé. C'est l'occasion de découvrir des villes historiques et de sentir le pouls de l'Amérique rurale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Découverte historique à The Dalles</strong>: Explorez cette ville historique, ancien point de passage pour les pionniers sur la piste de l'Oregon, avec son musée et ses bâtiments anciens.</li><li>🚗 <strong>Route panoramique vers Moro</strong>: Profitez du trajet à travers les vastes champs de blé et les paysages vallonnés du comté de Sherman, offrant une perspective différente de l'Oregon.</li><li>🏡 <strong>Installation à Moro et exploration locale</strong>: Arrivée à Moro, installation à votre hébergement et petite balade pour vous imprégner de l'atmosphère de cette petite ville rurale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Préparation</p>
+                                <p class="text-gray-700">Moro est une très petite ville. Assurez-vous d'avoir fait le plein d'essence et d'avoir quelques provisions avant d'arriver.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📡 Connectivité</p>
+                                <p class="text-gray-700">La couverture réseau peut être limitée dans certaines zones rurales. Téléchargez des cartes hors ligne si nécessaire.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Le cœur du comté de Sherman</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est dédiée à l'exploration des environs de Moro et du comté de Sherman, une région caractérisée par ses vastes paysages agricoles et ses parcs éoliens. C'est une immersion dans la vie rurale de l'Oregon, offrant des vues imprenables sur les champs à perte de vue et une sensation d'espace infini. Découvrez l'histoire locale et la puissance des énergies renouvelables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💨 <strong>Observation des éoliennes</strong>: Conduisez à travers les champs pour admirer les impressionnantes éoliennes qui parsèment le paysage, symboles de l'énergie renouvelable de la région.</li><li>🏛️ <strong>Visite du Sherman County Historical Museum</strong>: Plongez dans l'histoire des pionniers et de l'agriculture de la région, découvrant des artefacts et des récits fascinants.</li><li>🌅 <strong>Coucher de soleil sur les plaines</strong>: Trouvez un point de vue élevé pour admirer un coucher de soleil spectaculaire sur les vastes plaines du comté de Sherman, un moment de pure sérénité.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Les paysages ouverts et les éoliennes offrent des opportunités photographiques uniques, surtout au lever ou au coucher du soleil.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌬️ Vent</p>
+                                <p class="text-gray-700">Le comté de Sherman est souvent venteux, d'où la présence des éoliennes. Prévoyez des vêtements adaptés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Les merveilles géologiques des Painted Hills</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Préparez-vous pour une journée d'exploration d'un des trésors naturels les plus uniques de l'Oregon : les Painted Hills, une unité du John Day Fossil Beds National Monument. Ces collines aux couleurs vives, sculptées par des millions d'années d'histoire géologique, offrent un spectacle visuel époustouflant. C'est une excursion mémorable dans un paysage qui semble venir d'une autre planète.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Route panoramique vers les Painted Hills</strong>: Profitez du long trajet à travers des paysages changeants, des plaines agricoles aux formations rocheuses désertiques.</li><li>🎨 <strong>Randonnée aux Painted Hills Overlook Trail</strong>: Admirez les couches de couleurs vibrantes des collines, allant du rouge au jaune en passant par le noir, un spectacle géologique fascinant.</li><li>🚶‍♀️ <strong>Exploration du Leaf Hill Trail et Carroll Rim Trail</strong>: Parcourez ces sentiers courts pour des perspectives différentes sur les collines et pour observer les fossiles végétaux exposés.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Distance</p>
+                                <p class="text-gray-700">Les Painted Hills sont à environ 2h30 de route de Moro. Prévoyez une journée complète pour cette excursion.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Hydratation</p>
+                                <p class="text-gray-700">Même en hiver, le climat désertique peut être sec. Emportez suffisamment d'eau et des collations.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cap sur le désert central : Bend</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, vous quittez les plaines de l'est pour vous diriger vers le sud, vers la région du désert central de l'Oregon et la ville dynamique de Bend. Ce changement de paysage vous mènera à travers des forêts de pins et des formations volcaniques. Bend est une ville réputée pour ses activités de plein air et son ambiance décontractée. C'est une transition vers une nouvelle facette de la diversité de l'Oregon.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Trajet panoramique vers Bend</strong>: Profitez de la route à travers les paysages variés de l'Oregon, des plaines aux forêts de pins ponderosa.</li><li>🚶‍♀️ <strong>Balade le long de la Deschutes River</strong>: Une fois à Bend, promenez-vous le long de la pittoresque rivière Deschutes qui traverse la ville, offrant des vues apaisantes et des sentiers agréables.</li><li>🍻 <strong>Découverte du centre-ville de Bend</strong>: Explorez les boutiques, galeries et brasseries artisanales du charmant centre-ville de Bend, réputé pour son ambiance conviviale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏔️ Vues Montagneuses</p>
+                                <p class="text-gray-700">Par temps clair, Bend offre des vues spectaculaires sur les sommets enneigés des Cascades, comme les Three Sisters.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⛽ Essence</p>
+                                <p class="text-gray-700">En Oregon, il est interdit de faire le plein soi-même. Un pompiste s'en chargera pour vous.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventures volcaniques et culture du désert</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est consacrée à l'exploration des paysages volcaniques uniques qui entourent Bend et à la découverte de la faune et de la culture du désert. Des cratères aux musées interactifs, vous plongerez dans l'histoire géologique et naturelle de la région. C'est une journée riche en découvertes, alliant nature et apprentissage.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌋 <strong>Randonnée à Pilot Butte State Scenic Viewpoint</strong>: Montez au sommet de ce cône volcanique éteint situé en plein cœur de Bend pour des vues panoramiques sur la ville et les montagnes des Cascades.</li><li>🦅 <strong>Visite du High Desert Museum</strong>: Explorez ce musée fascinant qui met en valeur l'histoire naturelle, la culture et la faune du désert de l'Oregon, avec des expositions intérieures et extérieures.</li><li>🌲 <strong>Promenade dans le Newberry National Volcanic Monument</strong>: Découvrez des paysages lunaires, des coulées de lave et des lacs gelés dans ce monument national, offrant une immersion dans l'activité volcanique passée de la région.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">❄️ Activités Hivernales</p>
+                                <p class="text-gray-700">Bend est une destination populaire pour le ski et le snowboard en hiver. Si vous êtes intéressé, le Mont Bachelor est à proximité.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♂️ Chaussures</p>
+                                <p class="text-gray-700">Prévoyez des chaussures de marche robustes et imperméables pour les sentiers volcaniques et les promenades en nature.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Lacs et forêts des Cascades</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, l'itinéraire vous mène plus profondément dans la chaîne des Cascades, à la découverte de ses lacs et de ses forêts majestueuses. Bien que certains lacs puissent être gelés ou enneigés en février, la beauté des paysages hivernaux est indéniable. C'est une journée pour apprécier la tranquillité de la nature et les panoramas grandioses des montagnes de l'Oregon.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>❄️ <strong>Exploration du Lac Mirror (Mirror Lake)</strong>: Profitez d'une courte randonnée vers ce lac pittoresque, offrant des vues magnifiques sur le Mont Hood par temps clair, même en hiver.</li><li>🌲 <strong>Promenade dans la Forêt Nationale de Willamette</strong>: Conduisez à travers les routes scéniques de cette forêt, admirant les immenses conifères et la sérénité des paysages hivernaux.</li><li>📸 <strong>Point de vue sur le Lac Trillium (Trillium Lake)</strong>: Si l'accès est possible et sécurisé, ce lac offre des vues emblématiques du Mont Hood se reflétant dans ses eaux, même gelées.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Accès Routier</p>
+                                <p class="text-gray-700">De nombreuses routes de montagne peuvent être fermées ou nécessiter des chaînes en février. Vérifiez toujours les conditions routières avant de partir.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥪 Pique-nique</p>
+                                <p class="text-gray-700">Les options de restauration sont limitées dans ces zones reculées. Préparez un pique-nique et des boissons chaudes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers Portland et dernière soirée</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après avoir exploré les diverses facettes de l'Oregon, des plaines de Moro aux montagnes des Cascades, il est temps de reprendre la route vers Portland. Cette journée est l'occasion de profiter une dernière fois des paysages changeants de l'État et de se remémorer les moments forts de votre voyage. Une dernière soirée à Portland vous permettra de savourer l'ambiance unique de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Retour panoramique vers Portland</strong>: Prenez une route différente si possible pour varier les paysages lors de votre retour vers la capitale de l'Oregon.</li><li>🍜 <strong>Dîner dans un food cart pod</strong>: Pour votre dernière soirée, découvrez l'une des célèbres "food cart pods" de Portland, offrant une incroyable diversité de cuisines du monde entier à des prix abordables.</li><li>🛍️ <strong>Achats de dernière minute</strong>: Profitez de l'absence de taxe de vente en Oregon pour faire quelques emplettes de souvenirs ou de produits locaux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Shopping</p>
+                                <p class="text-gray-700">L'Oregon est l'un des rares États américains sans taxe de vente, ce qui est avantageux pour le shopping.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Food Carts</p>
+                                <p class="text-gray-700">Les "food carts" sont une institution à Portland. N'hésitez pas à essayer plusieurs stands pour une expérience culinaire variée.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Portland</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le dernier jour de votre aventure en Oregon. Après avoir exploré des paysages variés, des villes dynamiques aux déserts colorés, il est temps de prendre votre vol de retour. Profitez d'un dernier petit-déjeuner typiquement américain avant de vous diriger vers l'aéroport, la tête pleine de souvenirs inoubliables de l'État du Castor.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍳 <strong>Dernier petit-déjeuner à Portland</strong>: Savourez un dernier repas dans un café local, imprégné de l'ambiance unique de la ville.</li><li>🚗 <strong>Restitution de la voiture de location</strong>: Rendez votre véhicule à l'aéroport de Portland (PDX) en prévoyant suffisamment de temps.</li><li>🛫 <strong>Vol retour vers Gillett, Wisconsin</strong>: Embarquez pour votre vol, emportant avec vous les souvenirs d'un voyage mémorable à travers les paysages diversifiés de l'Oregon.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Moro-etats-unis-e43h7bsfflt24q5/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Arrivez à l'aéroport au moins 2 heures avant votre vol intérieur pour les formalités de sécurité.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Bagages</p>
+                                <p class="text-gray-700">Vérifiez les restrictions de bagages de votre compagnie aérienne avant de vous rendre à l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>$550 USD/pers (vol aller-retour Gillett, WI - Portland, OR avec escale)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>$590 USD/pers (location voiture 14j + essence, base 2 pers)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>$525 USD/pers (environ $37/jour pour 14 jours, repas variés)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>$975 USD/pers (13 nuits en hôtel 3 étoiles, base 2 pers)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>$245 USD/pers (entrées parcs, musées, activités diverses)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de mai à octobre pour un temps plus doux et un accès facilité à toutes les activités de plein air. Cependant, février offre une beauté hivernale unique et moins de foule.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">👥 L'Oregon compte environ 4,3 millions d'habitants. La population est concentrée dans la Willamette Valley, notamment à Portland. L'État est connu pour son esprit progressiste et son amour de la nature.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🇺🇸 Les États-Unis sont un pays vaste et diversifié. L'Oregon se distingue par ses paysages variés, allant des plages du Pacifique aux volcans enneigés, en passant par les déserts et les forêts denses.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">⛽ En Oregon, il est illégal de faire le plein d'essence soi-même (sauf dans certaines zones rurales la nuit). Un pompiste s'occupera de votre véhicule. C'est une particularité unique de l'État !</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛍️ L'Oregon n'applique pas de taxe de vente, ce qui rend le shopping particulièrement intéressant pour les visiteurs.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Moro-etats-unis-e43h7bsfflt24q5/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://traveloregon.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Travel Oregon</strong></a></li>
+                    
+                        <li><a href="https://www.nps.gov/state/or/index.htm" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🏞️ National Park Service (Oregon)</strong></a></li>
+                    
+                        <li><a href="https://www.weather.gov/pqr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ National Weather Service (Oregon)</strong></a></li>
+                    
+                        <li><a href="https://www.tripcheck.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛣️ Oregon Department of Transportation (ODOT)</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
